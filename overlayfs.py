@@ -51,7 +51,7 @@ def raw_copy_up(files):
 
 def should_be_verbose(cmd):
         """
-        If the debuglevel is > 0 then be verbose
+        If the debuglevel is > 2 then be verbose
         """
         if not hasattr(cmd, 'debuglevel'):
                 return False
