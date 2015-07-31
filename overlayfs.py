@@ -55,7 +55,7 @@ def should_be_verbose(cmd):
         """
         if not hasattr(cmd, 'debuglevel'):
                 return False
-        return cmd.debuglevel > 0
+        return cmd.debuglevel > 2
 
 def should_touch():
         """ 
