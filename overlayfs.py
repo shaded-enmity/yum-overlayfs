@@ -65,8 +65,7 @@ def should_touch():
         if not path.exists(mtab):
                 return False
         with open(mtab, 'r') as f:
-                line = f.readline()
-                return line.startswith('overlay / overlay')
+                return any(line.startswith('overlay / overlay') for line in f.readlines())
         return False
 
 def prereposetup_hook(conduit):
